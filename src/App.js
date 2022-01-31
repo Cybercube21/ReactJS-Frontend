@@ -1,29 +1,37 @@
 import './App.css';
-import './styles.css'
+import './styles.css';
+//import './navbar.js';
 
 function App() {
   return (
     <div className="App">
-      <nav class="navbar">
-         <div class="navbar__container">
-            <div class="navbar__toggle" id="mobile-menu">
-               <span class="bar"></span>
-               <span class="bar"></span>
-               <span class="bar"></span>
+      <nav className="navbar">
+         <div className="navbar__container">
+            <div className="navbar__toggle" id="mobile-menu">
+               <span className="bar"></span>
+               <span className="bar"></span>
+               <span className="bar"></span>
             </div>
-            <ul class="navbar__menu">
-               <li class="navbar__item">
-                  <a href="https://cybercube21.de" class="navbar__links"> Home </a>
+            <ul className="navbar__menu">
+               <li className="navbar__item">
+                  <a href="https://cybercube21.de" className="navbar__links"> Home </a>
                </li>
-               <li class="navbar__item">
-                  <a href="/" onclick="memes_alert();" class="navbar__links"> Memes </a>
+               <li className="navbar__item">
+                  <a href="/" className="navbar__links"> Memes </a>
                </li>
-               <li class="navbar__item">
-                  <a href="https://cybercube21.de/contact.html" class="navbar__links"> Contact </a>
+               <li className="navbar__item">
+                  <a href="https://cybercube21.de/contact.html" className="navbar__links"> Contact </a>
                </li>
             </ul>
          </div>
       </nav>
+      <div className="center-object">
+        <div className="wrapper">
+          <main className='page-main'>
+            s
+          </main> 
+        </div>
+      </div>
     </div>
   );
 }

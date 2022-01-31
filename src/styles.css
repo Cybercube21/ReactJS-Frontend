@@ -5,6 +5,16 @@
     font-family: 'Kumbh Sans', sans-serif;
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+  
+  .page-main {
+    flex-grow: 1;
+  }
+
 .navbar {
     background: rgba(36,36,36,.96);
     height: 80px;

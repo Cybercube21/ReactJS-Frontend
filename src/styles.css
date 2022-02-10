@@ -157,8 +157,8 @@
 }
 
 .container__pop-up-img {
-    max-width: 80vh;
-    max-height: 80vh;
+    max-width: 60vh;
+    max-height: 60vh;
     display: inline;
 }
 
@@ -173,3 +173,68 @@
 .projectul{
     padding-left: 2em;
 }
+
+.load_button{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    padding: 16px;
+    width: 30%;
+    text-align: center;
+    border: none;
+    outline: none;
+    transition: 1s;
+    margin-top: 30px;
+}
+
+.headline {
+    color: white;
+    margin-top: 30px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.p{
+    color: white;
+    margin-bottom: 15px;
+}
+
+.panel_text{
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-top: 15px;
+    background-color: rgba(36,36,36,.96);
+    color: white;
+    text-align: center;
+  }
+
+  .a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  .a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  .a:hover {
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  .a:active {
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
+  }

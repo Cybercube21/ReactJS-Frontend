@@ -1,7 +1,6 @@
 import './App.css';
 import './styles.css';
 
-
 var meme;
 var meme_json;
 var meme_fileExt;
@@ -33,8 +32,7 @@ function load_meme(){
    meme_fileExt = meme_json.url.split('.').pop();
 
    var el = document.getElementById('hiddencontainer')
-   var video = document.getElementsByTagName('video')
-   if (meme_fileExt === "mp4") {
+   if (meme_fileExt === "webm") {
       // Make img hidden
       el.children[0].setAttribute('src', '')
 
@@ -75,6 +73,9 @@ function App() {
                   <a href="/" className="navbar__links"> Memes </a>
                </li>
                <li className="navbar__item">
+                  <a href="https://api.cybercube21.de" className="navbar__links"> API </a>
+               </li>
+               <li className="navbar__item">
                   <a href="https://cybercube21.de/contact.html" className="navbar__links"> Contact </a>
                </li>
             </ul>
@@ -83,13 +84,17 @@ function App() {
       <div className="center-object">
         <div className="wrapper">
           <main className='page-main'>
-            <button className='load_button' id='modal_button' onClick={load_meme}>Test Button</button>
+             <p className='headline'>Welcome to Cubie's delicious memes</p> 
+            <button className='load_button' id='modal_button' onClick={load_meme}><p className='panel_text'>Give me a meme!</p></button>
             <div className="container__pop-up" id="hiddencontainer">
                <img alt="" className="container__pop-up-img" src="" id="hiddenimage"/>
                <video alt="" className="container__pop-up-img" src="" id="hiddenimage" autoPlay playsInline loop/>
             </div>
           </main> 
         </div>
+      </div>
+      <div className='footer'>
+         <p className='p'>Wanna include them in your Website? Visit <a class="a" href="https://api.cybercube21.de">my API reference</a></p>
       </div>
     </div>
   );

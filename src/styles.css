@@ -155,6 +155,7 @@
     top: 50%; right: 50%;
     transform: translate(50%,-50%);
 }
+
 .container__pop-up-img {
     max-width: 80vh;
     max-height: 80vh;

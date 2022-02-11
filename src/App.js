@@ -2,8 +2,20 @@ import './App.css';
 import './styles.css';
 import './modal.js';
 import './modal.css';
+import meme from './memes/test.webp';
+
 
 function App() {
+
+   function load_memes(){ 
+    
+      var el = document.getElementById('hiddencontainer')
+            el.children[1].setAttribute('src', '')
+            el.setAttribute('style', '')
+    
+      el.setAttribute('style', 'display: inline;')
+    }
+
   return (
     <div className="App">
       <nav className="navbar">
@@ -28,9 +40,11 @@ function App() {
          </div>
       </nav>
       <div className="center-object">
+        <div className='load_button'>
+          <button id='modal_button' onClick={load_memes}>Test Button</button>
+        </div>
         <div className="wrapper">
           <main className='page-main'>
-            <button id='modal_button'>Test Button</button>
             <div id="container__modal" className="modal">
                <div className="container__pop-up" id="hiddencontainer">
                   <span className="close" />

@@ -28,5 +28,5 @@ window.onload = function(){
           el.children[1].setAttribute('src', '')
           el.setAttribute('style', '')
     }
-  }  
+  }
 };

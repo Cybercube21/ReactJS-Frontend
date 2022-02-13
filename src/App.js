@@ -1,10 +1,10 @@
 import './App.css';
 import './styles.css';
-
 import MemeContainer from './meme_container';
-
+import Popup from  './popup.js';
 
 function App() {
+
   return (
     <div className="App">
       <nav className="navbar">
@@ -33,6 +33,7 @@ function App() {
       <div className="center-object">
         <div className="wrapper">
           <main className='page-main'>
+            <Popup />
             <MemeContainer />
           </main> 
         </div>

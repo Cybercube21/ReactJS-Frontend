@@ -25,3 +25,6 @@ npm start
 This should be enough to get started.
 ## Contact 
 Join my [Discord Server](https://discord.gg/4XYcD2Jk54) or DM me: Cybercube#0499
+
+## License
+[GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)

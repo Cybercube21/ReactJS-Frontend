@@ -29,7 +29,7 @@ class Popup extends React.Component {
                                 <p> The content is not intended to discriminate minorities. </p>
                                 <p> If you feel offended, pls remember that i probably dont care :)</p></div>
                             <div className="modal-footer">
-                                <button type="button" className="btn btn-secondary" onClick={this.handleShow}>Close</button>
+                                <button type="button" className="btn btn-secondary" onClick={this.handleShow}>I understand</button>
                             </div>
                         </div>
                     </div>

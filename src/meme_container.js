@@ -33,7 +33,7 @@ class MemeContainer extends React.Component {
 
         return (
             <div>
-                <p className='headline'>Welcome to Cubie's delicious memes</p> 
+                <p className='headline'>Welcome to Cubie's meme collection!</p> 
                 <button className='load_button' id='modal_button' onClick={this.load_meme.bind(this)}><p className='panel_text'>Give me a meme!</p></button>
                 <div className="container__pop-up" id="hiddencontainer">
                     {element}

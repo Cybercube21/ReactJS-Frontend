@@ -4,6 +4,7 @@ class MemeContainer extends React.Component {
     constructor(props){
         super(props);
         this.state={ext:undefined};
+        this.state={share_link:undefined}
     }
 
     async fetch_meme(url){
@@ -16,8 +17,9 @@ class MemeContainer extends React.Component {
 
         var meme_json = await this.fetch_meme('https://api.cybercube21.de/memes'); 
         var meme_fileExt = meme_json.url.split('.').pop();
+        var meme_fileName = meme_json.url.split('/').pop();
 
-        this.setState({ext:meme_fileExt,url:meme_json.url});
+        this.setState({ext:meme_fileExt,url:meme_json.url,share_link:meme_fileName});
     }
 
     render() {
@@ -38,6 +40,7 @@ class MemeContainer extends React.Component {
                 <div className="container__pop-up" id="hiddencontainer">
                     {element}
                 </div>
+                <button className='load_button' onClick={() => {navigator.clipboard.writeText("https://api.cybercube21.de/share/" + this.state.share_link)}}><p className='panel_text'>Share this meme!</p></button>
             </div>
         )
 

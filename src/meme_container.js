@@ -30,7 +30,7 @@ class MemeContainer extends React.Component {
         if(state.ext === "webp") {
             element = <img alt="" className="container__pop-up-img" src={state.url} id="hiddenimage"/>
         } else if (state.ext === "webm") {
-            element = <video alt="" className="container__pop-up-img" src={state.url} id="hiddenimage" controls autoPlay playsInline />
+            element = <video alt="" className="container__pop-up-img" src={state.url} id="hiddenimage" controls playsInline />
         }
 
         return (

@@ -35,7 +35,7 @@ class MemeContainer extends React.Component {
         }
 
         if (this.state.share_link !== undefined) {
-            share_button = <button className='load_button' id="share_button" onClick={() => {navigator.clipboard.writeText("https://api.cybercube21.de/share/" + this.state.share_link)}}><p className='panel_text'>Share this meme!</p></button>
+            share_button = <button className='load_button' id="share_button" onClick={() => {navigator.clipboard.writeText("https://api.cybercube21.de/share/" + this.state.share_link)}}><p className='panel_text'>Share this meme!</p><p>(copy link to clipboard)</p></button>
         }
 
         return (

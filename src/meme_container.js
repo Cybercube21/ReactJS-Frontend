@@ -26,6 +26,7 @@ class MemeContainer extends React.Component {
 
         const state = this.state;
         var element= <div></div>;
+        var share_button=  <div></div>;
 
         if(state.ext === "webp") {
             element = <img alt="" className="container__pop-up-img" src={state.url} id="hiddenimage"/>
@@ -33,14 +34,20 @@ class MemeContainer extends React.Component {
             element = <video alt="" className="container__pop-up-img" src={state.url} id="hiddenimage" controls playsInline />
         }
 
+        if (this.state.share_link !== undefined) {
+            share_button = <button className='load_button' id="share_button" onClick={() => {navigator.clipboard.writeText("https://api.cybercube21.de/share/" + this.state.share_link)}}><p className='panel_text'>Share this meme!</p></button>
+        }
+
         return (
             <div>
-                <p className='headline'>Welcome to Cubie's meme collection!</p> 
-                <button className='load_button' id='modal_button' onClick={this.load_meme.bind(this)}><p className='panel_text'>Give me a meme!</p></button>
+                <div>
+                    <p className='headline'>Welcome to Cubie's meme collection!</p> 
+                    <button className='load_button' id='modal_button' onClick={this.load_meme.bind(this)}><p className='panel_text'>Give me a meme!</p></button>
+                    {share_button}
+                </div>
                 <div className="container__pop-up" id="hiddencontainer">
                     {element}
                 </div>
-                <button className='load_button' onClick={() => {navigator.clipboard.writeText("https://api.cybercube21.de/share/" + this.state.share_link)}}><p className='panel_text'>Share this meme!</p></button>
             </div>
         )
 

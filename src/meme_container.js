@@ -5,6 +5,7 @@ class MemeContainer extends React.Component {
         super(props);
         this.state={ext:undefined};
         this.state={share_link:undefined}
+        this.state={last_share_link:undefined}
     }
 
     async fetch_meme(url){
@@ -14,6 +15,10 @@ class MemeContainer extends React.Component {
      }
 
     async load_meme() {
+
+        if (meme_fileName !== undefined){
+            var last_share_link = meme_fileName;
+        }
 
         var meme_json = await this.fetch_meme('https://api.cybercube21.de/memes'); 
         var meme_fileExt = meme_json.url.split('.').pop();
@@ -25,8 +30,9 @@ class MemeContainer extends React.Component {
     render() {
 
         const state = this.state;
-        var element= <div></div>;
-        var share_button=  <div></div>;
+        var element = <div></div>;
+        var share_button =  <div></div>;
+        var back_button = <div></div>;
 
         if(state.ext === "webp") {
             element = <img alt="" className="container__pop-up-img" src={state.url} id="hiddenimage"/>
@@ -38,12 +44,17 @@ class MemeContainer extends React.Component {
             share_button = <button className='load_button' id="share_button" onClick={() => {navigator.clipboard.writeText("https://api.cybercube21.de/share/" + this.state.share_link)}}><p className='panel_text'>Share this meme!</p><p>(copy link to clipboard)</p></button>
         }
 
+        if (this.state.last_share_link !== undefined) {
+            share_button = <button className='load_button' id="back_button" onClick={() => {element = <video alt="" className="container__pop-up-img" src={last_share_link} id="hiddenimage" controls playsInline />}}><p className='panel_text'>Share this meme!</p><p>(copy link to clipboard)</p></button>
+        }
+
         return (
             <div>
                 <div>
                     <p className='headline'>Welcome to Cubie's meme collection!</p> 
                     <button className='load_button' id='modal_button' onClick={this.load_meme.bind(this)}><p className='panel_text'>Give me a meme!</p></button>
                     {share_button}
+                    {back_button}
                 </div>
                 <div className="container__pop-up" id="hiddencontainer">
                     {element}

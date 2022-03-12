@@ -26,7 +26,8 @@ class Popup extends React.Component {
                             </div>
                             <div className="modal-body">
                                 <p> This website is for entertainment purposes ONLY! </p>
-                                <p> The content is not intended to discriminate minorities. </p>
+                                <p> These memes do not necessarily reflect my opinion/attitude towards various topics or groups of people.</p>
+                                <p> It is your right to find the memes offensive, distasteful, or just bad.</p>
                                 <p> If you feel offended, pls remember that i probably dont care :)</p></div>
                             <div className="modal-footer">
                                 <button type="button" className="btn btn-secondary" onClick={this.handleShow}>I understand</button>

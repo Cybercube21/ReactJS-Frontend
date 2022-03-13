@@ -40,7 +40,8 @@ class MemeContainer extends React.Component {
 
         // Get fileExt & Set states for reloading last meme
         var meme_fileExt = back_link.split('.').pop();
-        this.setState({ext:meme_fileExt,url:back_link,share_link:back_link,back_link:undefined});
+        var back_filename = back_link.split('/').pop();
+        this.setState({ext:meme_fileExt,url:back_link,share_link:back_filename,back_link:undefined});
     }
 
     render() {

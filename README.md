@@ -1,19 +1,22 @@
 
-# memes.cybercube21.de
+# ReactJS Frontend
 
 
-In this repo i provide the code hosted on [memes.cybercube21.de](https://memes.cybercube21.de). 
-A Meme website written in ReactJS which uses [my API](https://api.cybercube21.de) as a backend. It fetches a random meme from my API and embed it.
+In this repo i provide the code ~~hosted on [memes.cybercube21.de](https://memes.cybercube21.de). <br>~~ This will be replaced by a frontend written in Nuxt soon.
+
+A website written in ReactJS which uses [my API](https://api.cybercube21.de) as a backend. It fetches a random meme from my API and embed it. 
+
+It can be used to embed any image or video as long as it got the right file extension tho
 
 Right now, it detects .webp's as pictures and embed it in a \<img> tag, while .webm's are detected as videos and getting embed in a \<video> tag.\
-I might rework that later, but dont count on it.
+
 ## Installation
 
 Clone the repo and use npm to install the dependencies:
 
 ```shell
-clone https://github.com/Cybercube21/memes.cybercube21.de.git
-cd memes.cybercube21.de/
+clone git@github.com:Cybercube21/ReactJS-Frontend.git
+cd reactjs-frontend/
 npm install .
 ```
 

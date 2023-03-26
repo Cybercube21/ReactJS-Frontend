@@ -4,7 +4,7 @@
 
 In this repo i provide the code ~~hosted on [memes.cybercube21.de](https://memes.cybercube21.de). <br>~~ This will be replaced by a frontend written in Nuxt soon.
 
-A website written in ReactJS which uses [my API](https://api.cybercube21.de) as a backend. It fetches a random meme from my API and embed it. 
+A website written in ReactJS which uses [my API](https://github.com/Cybercube21/Python-meme-API) as a backend. It fetches a random meme from my API and embed it. 
 
 It can be used to embed any image or video as long as it got the right file extension tho
 
